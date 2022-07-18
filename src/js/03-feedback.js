@@ -46,4 +46,4 @@ const submitFunc = event => {
 };
 
 contactForm.addEventListener('submit', submitFunc);
-contactForm.addEventListener('input', onContactFormChange);
+contactForm.addEventListener('input', throttle(onContactFormChange, 500));
